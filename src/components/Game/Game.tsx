@@ -1,6 +1,5 @@
 import React from 'react';
 import { withStyles } from '@material-ui/core/styles';
-import { Style } from 'jss';
 import { CSSProperties } from '@material-ui/styles';
 import { Tile } from '../Tile';
 
@@ -38,7 +37,7 @@ export const GameComponent: React.FC<Props> = (props: Props) => {
   );
 };
 
-const styles: Style = (theme: CustomTheme): Record<ClassNames, ((p: Props) => CSSProperties) | CSSProperties> => ({
+const styles: any = (theme: CustomTheme): Record<ClassNames, ((p: Props) => CSSProperties) | CSSProperties> => ({
   container: (props: Props) => ({
     display: 'grid',
     gridTemplateColumns: props.game ? getGridDisplay(props.game) : '',

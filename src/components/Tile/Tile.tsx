@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
 import { withStyles } from '@material-ui/core/styles';
-import { Style } from 'jss';
 import { CSSProperties } from '@material-ui/styles';
 
 import { CustomTheme } from '../../style/theme';
@@ -32,7 +31,7 @@ export const Tile: React.FC<Props> = (props: Props) => {
   return <div className={classes.container} onClick={onClick}></div>;
 };
 
-const styles: Style = (theme: CustomTheme): Record<ClassNames, ((p: Props) => CSSProperties) | CSSProperties> => ({
+const styles: any = (theme: CustomTheme): Record<ClassNames, ((p: Props) => CSSProperties) | CSSProperties> => ({
   container: (props: Props) => ({
     height: theme.custom.size.tile,
     width: theme.custom.size.tile,
